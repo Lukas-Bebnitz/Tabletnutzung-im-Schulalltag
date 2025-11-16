@@ -148,6 +148,9 @@
         table {
             border-spacing: 6px;
         }
+        input {
+            width: 90px;
+        }
     </style>
 </head>
 
@@ -181,14 +184,14 @@
             <section class="mdl-layout__tab-panel" id="fixed-tab-3">
                 <div class="page-content">
                     <h3 style="text-align: center; margin-top: 50px; font-size: 275%;">Entscheidungsmatrix</h3>
-                    <div text-align="center" align="center">
+                    <div text-align="center" align="center" width="100%">
                         <table class="">
                             <thead>
                                 <tr>
                                     <th class="">Aussagen</th>
-                                    <th>Persönliche Gewichtung</th>
-                                    <th>Ergebnisse Ja</th>
-                                    <th>Ergebnisse Nein</th>
+                                    <th>Persönliche <br>Gewichtung</th>
+                                    <th>Ergebnisse <br>Ja</th>
+                                    <th>Ergebnisse <br>Nein</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -198,7 +201,7 @@
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung1"
-                                                placeholder="Gewichtung..." style="outline: none;">
+                                                placeholder="Gewichtung..." style="outline: none;" width="10px">
                                         </div>
                                     </td>
                                     <td class="cells center" id="ergebnis_ja_1" value=""></td>
