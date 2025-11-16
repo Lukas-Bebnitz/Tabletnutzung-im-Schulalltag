@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabletnuztung im Unterricht - Ja oder Nein?</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script>
+        function berechen() {
+            document.getElementById("ergebnis_ja_1").innerText = parseFloat(document.getElementById("gewichtung1").value) * 4;
+            document.getElementById("ergebnis_ja_2").innerText = parseFloat(document.getElementById("gewichtung2").value) * 4;
+            document.getElementById("ergebnis_ja_3").innerText = parseFloat(document.getElementById("gewichtung3").value) * 4;
+            document.getElementById("ergebnis_ja_4").innerText = parseFloat(document.getElementById("gewichtung4").value) * 4;
+            document.getElementById("ergebnis_ja_5").innerText = parseFloat(document.getElementById("gewichtung5").value) * 3;
+            document.getElementById("ergebnis_ja_6").innerText = parseFloat(document.getElementById("gewichtung6").value) * 4;
+            document.getElementById("ergebnis_ja_7").innerText = parseFloat(document.getElementById("gewichtung7").value) * 1;
+            document.getElementById("ergebnis_ja_8").innerText = parseFloat(document.getElementById("gewichtung8").value) * 1;
+            document.getElementById("ergebnis_ja_9").innerText = parseFloat(document.getElementById("gewichtung9").value) * 1;
+            document.getElementById("ergebnis_ja_10").innerText = parseFloat(document.getElementById("gewichtung10").value) * 2;
+            document.getElementById("ergebnis_ja_11").innerText = parseFloat(document.getElementById("gewichtung11").value) * 1;
+            document.getElementById("ergebnis_ja_12").innerText = parseFloat(document.getElementById("gewichtung12").value) * 1;
+
+            document.getElementById("ergebnis_nein_1").innerText = parseFloat(document.getElementById("gewichtung1").value) * 1;
+            document.getElementById("ergebnis_nein_2").innerText = parseFloat(document.getElementById("gewichtung2").value) * 1;
+            document.getElementById("ergebnis_nein_3").innerText = parseFloat(document.getElementById("gewichtung3").value) * 1;
+            document.getElementById("ergebnis_nein_4").innerText = parseFloat(document.getElementById("gewichtung4").value) * 1;
+            document.getElementById("ergebnis_nein_5").innerText = parseFloat(document.getElementById("gewichtung5").value) * 2;
+            document.getElementById("ergebnis_nein_6").innerText = parseFloat(document.getElementById("gewichtung6").value) * 1;
+            document.getElementById("ergebnis_nein_7").innerText = parseFloat(document.getElementById("gewichtung7").value) * 4;
+            document.getElementById("ergebnis_nein_8").innerText = parseFloat(document.getElementById("gewichtung8").value) * 4;
+            document.getElementById("ergebnis_nein_9").innerText = parseFloat(document.getElementById("gewichtung9").value) * 4;
+            document.getElementById("ergebnis_nein_10").innerText = parseFloat(document.getElementById("gewichtung10").value) * 3;
+            document.getElementById("ergebnis_nein_11").innerText = parseFloat(document.getElementById("gewichtung11").value) * 4;
+            document.getElementById("ergebnis_nein_12").innerText = parseFloat(document.getElementById("gewichtung12").value) * 4;
+
+            if(document.getElementById("gewichtung1").value == "") {
+                document.getElementById("ergebnis_ja_1").innerText = "";
+                document.getElementById("ergebnis_nein_1").innerText = "";
+            }
+            if(document.getElementById("gewichtung2").value == "") {
+                document.getElementById("ergebnis_ja_2").innerText = "";
+                document.getElementById("ergebnis_nein_2").innerText = "";
+            }
+            if(document.getElementById("gewichtung3").value == "") {
+                document.getElementById("ergebnis_ja_3").innerText = "";
+                document.getElementById("ergebnis_nein_3").innerText = "";
+            }
+            if(document.getElementById("gewichtung4").value == "") {
+                document.getElementById("ergebnis_ja_4").innerText = "";
+                document.getElementById("ergebnis_nein_4").innerText = "";
+            }
+            if(document.getElementById("gewichtung5").value == "") {
+                document.getElementById("ergebnis_ja_5").innerText = "";
+                document.getElementById("ergebnis_nein_5").innerText = "";
+            }
+            if(document.getElementById("gewichtung6").value == "") {
+                document.getElementById("ergebnis_ja_6").innerText = "";
+                document.getElementById("ergebnis_nein_6").innerText = "";
+            }
+            if(document.getElementById("gewichtung7").value == "") {
+                document.getElementById("ergebnis_ja_7").innerText = "";
+                document.getElementById("ergebnis_nein_7").innerText = "";
+            }
+            if(document.getElementById("gewichtung8").value == "") {
+                document.getElementById("ergebnis_ja_8").innerText = "";
+                document.getElementById("ergebnis_nein_8").innerText = "";
+            }
+            if(document.getElementById("gewichtung9").value == "") {
+                document.getElementById("ergebnis_ja_9").innerText = "";
+                document.getElementById("ergebnis_nein_9").innerText = "";
+            }
+            if(document.getElementById("gewichtung10").value == "") {
+                document.getElementById("ergebnis_ja_10").innerText = "";
+                document.getElementById("ergebnis_nein_10").innerText = "";
+            }
+            if(document.getElementById("gewichtung11").value == "") {
+                document.getElementById("ergebnis_ja_11").innerText = "";
+                document.getElementById("ergebnis_nein_11").innerText = "";
+            }
+            if(document.getElementById("gewichtung12").value == "") {
+                document.getElementById("ergebnis_ja_12").innerText = "";
+                document.getElementById("ergebnis_nein_12").innerText = "";
+            }
+        }
+
+        function zusammen() {
+            insgesamt_ja = 0;
+            for (let i = 1; i <= 12; i++) {
+                let ja_wert = parseFloat(document.getElementById("ergebnis_ja_" + i).innerText);
+                if (!isNaN(ja_wert)) {
+                    insgesamt_ja += ja_wert;
+                }
+            }
+            if(insgesamt_ja > 0){
+                document.getElementById("insgesamt_ja").innerText = "Insgesamt Ja: " + insgesamt_ja;
+            }
+
+            insgesamt_nein = 0;
+            for (let i = 1; i <= 12; i++) {
+                let nein_wert = parseFloat(document.getElementById("ergebnis_nein_" + i).innerText);
+                if (!isNaN(nein_wert)) {
+                    insgesamt_nein += nein_wert;
+                }
+            }
+            if(insgesamt_nein > 0){
+                document.getElementById("insgesamt_nein").innerText = "Insgesamt Nein: " + insgesamt_nein;
+            }
+        }
+
+        function auswertung() {
+            let print = true;
+            for(let i = 1; i <= 12; i++){
+                if(document.getElementById("ergebnis_ja_" + i).innerHTML == "" || document.getElementById("ergebnis_nein_" + i).innerHTML == ""){
+                    print = false;
+                }else{
+                    console.log("Nicht alle Felder ausgefüllt");
+                }
+            }
+            if(print){
+                if (insgesamt_ja > 0) {
+                    document.getElementById("Auswertung").innerText = "Du solltest ein Tablet nutzen!";
+                } else {
+                    document.getElementById("Auswertung").innerText = "Du solltest kein Tablet nutzen!";
+                }
+            }
+        }
+
+        document.addEventListener("change", function () {
+            berechen();
+            zusammen();
+            auswertung();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title" style="font-size: xx-large;">Soll ich ein Tablet nutzen?</span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Vorteile</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab">Nachteile</a>
+                <a href="#fixed-tab-3" class="mdl-layout__tab">Entscheidungsmatrix</a>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+                <div class="page-content">
+                    <h1 style="text-align: center; margin-top: 50px;">Vorteile eines Tablets</h1>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div class="page-content">
+                    <h1 style="text-align: center; margin-top: 50px;">Nachteile eines Tablets</h1>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+                <div class="page-content">
+                    <h3 style="text-align: center; margin-top: 50px; font-size: 275%;">Entscheidungsmatrix</h3>
+                    <div style="width: 99%" text-align="center" align="center">
+                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                            <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">Aussagen</th>
+                                    <th>Persönliche Gewichtung</th>
+                                    <th>Ergebnisse Ja</th>
+                                    <th>Ergebnisse Nein</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Höhere Vielfalt beim Lernen</td>
+                                    <!-- Numeric Textfield with Floating Label -->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung1">
+                                            <label class="mdl-textfield__label" for="gewichtung1">Gewichtung...</label>
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5
+                                                ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_1" value=""></td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_1" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Organisation / Dokumentation</td>
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung2">
+                                            <label class="mdl-textfield__label" for="gewichtung2">Gewichtung...</label>
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_2" value=""></td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_2" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Schnellerer Informationsaustausch</td>
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung3">
+                                            <label class="mdl-textfield__label" for="gewichtung3">Gewichtung...</label>
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_3" value=""></td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_3" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Weniger Gewicht in der Schultasche</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung4"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung4">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_4" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_4" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Sammeln von Erfahrung für das Berufsleben</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung5"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung5">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_5" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_5" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Nachhaltigkeit</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung6"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung6">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_6" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_6" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">keine Eigenkompetenz</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung7"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung7">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_7" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_7" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Hohe Anschaffungskosten</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung8"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung8">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_8" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_8" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Hohes Ablenkungspotenzial</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung9"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung9">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_9" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_9" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Erhöhte Bildschirmzeit</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung10"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung10">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_10" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_10" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Größere technische Abhängigkeiten</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung11"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung11">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_11" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_11" value=""></td> <!--Hier-->
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">Datenmissbrauch möglich</td> <!--Hier-->
+                                    <td>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <input class="mdl-textfield__input" type="text" pattern="-?[1-5]*(\.[1-5]+)?"
+                                                id="gewichtung12"> <!--Hier-->
+                                            <label class="mdl-textfield__label" for="gewichtung12">Gewichtung...</label> <!--Hier-->
+                                            <span class="mdl-textfield__error">Gib eine Zahl zwischen 1 und 5 ein!</span>
+                                        </div>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_ja_12" value=""></td> <!--Hier-->
+                                    <td class="mdl-data-table__cell--non-numeric" id="ergebnis_nein_12" value=""></td> <!--Hier-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="text-align: center;"><br><h4 id="insgesamt_ja">Insgesamt Ja: 0</h4></div>
+                    <div style="text-align: center;"><h4 id="insgesamt_nein">Insgesamt Nein: 0</h4></div>
+                    <div style="text-align: center;"><br><h3 id="Auswertung"></h3></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
