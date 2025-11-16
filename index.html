@@ -11,31 +11,60 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
         function berechen() {
-            document.getElementById("ergebnis_ja_1").innerText = parseFloat(document.getElementById("gewichtung1").value) * 4;
-            document.getElementById("ergebnis_ja_2").innerText = parseFloat(document.getElementById("gewichtung2").value) * 4;
-            document.getElementById("ergebnis_ja_3").innerText = parseFloat(document.getElementById("gewichtung3").value) * 4;
-            document.getElementById("ergebnis_ja_4").innerText = parseFloat(document.getElementById("gewichtung4").value) * 4;
-            document.getElementById("ergebnis_ja_5").innerText = parseFloat(document.getElementById("gewichtung5").value) * 3;
-            document.getElementById("ergebnis_ja_6").innerText = parseFloat(document.getElementById("gewichtung6").value) * 4;
-            document.getElementById("ergebnis_ja_7").innerText = parseFloat(document.getElementById("gewichtung7").value) * 1;
-            document.getElementById("ergebnis_ja_8").innerText = parseFloat(document.getElementById("gewichtung8").value) * 1;
-            document.getElementById("ergebnis_ja_9").innerText = parseFloat(document.getElementById("gewichtung9").value) * 1;
-            document.getElementById("ergebnis_ja_10").innerText = parseFloat(document.getElementById("gewichtung10").value) * 2;
-            document.getElementById("ergebnis_ja_11").innerText = parseFloat(document.getElementById("gewichtung11").value) * 1;
-            document.getElementById("ergebnis_ja_12").innerText = parseFloat(document.getElementById("gewichtung12").value) * 1;
+            wert_ja = [];
+            wert_nein = [];
 
-            document.getElementById("ergebnis_nein_1").innerText = parseFloat(document.getElementById("gewichtung1").value) * 1;
-            document.getElementById("ergebnis_nein_2").innerText = parseFloat(document.getElementById("gewichtung2").value) * 1;
-            document.getElementById("ergebnis_nein_3").innerText = parseFloat(document.getElementById("gewichtung3").value) * 1;
-            document.getElementById("ergebnis_nein_4").innerText = parseFloat(document.getElementById("gewichtung4").value) * 1;
-            document.getElementById("ergebnis_nein_5").innerText = parseFloat(document.getElementById("gewichtung5").value) * 2;
-            document.getElementById("ergebnis_nein_6").innerText = parseFloat(document.getElementById("gewichtung6").value) * 1;
-            document.getElementById("ergebnis_nein_7").innerText = parseFloat(document.getElementById("gewichtung7").value) * 4;
-            document.getElementById("ergebnis_nein_8").innerText = parseFloat(document.getElementById("gewichtung8").value) * 4;
-            document.getElementById("ergebnis_nein_9").innerText = parseFloat(document.getElementById("gewichtung9").value) * 4;
-            document.getElementById("ergebnis_nein_10").innerText = parseFloat(document.getElementById("gewichtung10").value) * 3;
-            document.getElementById("ergebnis_nein_11").innerText = parseFloat(document.getElementById("gewichtung11").value) * 4;
-            document.getElementById("ergebnis_nein_12").innerText = parseFloat(document.getElementById("gewichtung12").value) * 4;
+            wert_ja.push(parseFloat(document.getElementById("gewichtung1").value) * 4);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung2").value) * 4);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung3").value) * 4);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung4").value) * 4);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung5").value) * 3);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung6").value) * 4);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung7").value) * 1);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung8").value) * 1);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung9").value) * 1);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung10").value) * 2);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung11").value) * 1);
+            wert_ja.push(parseFloat(document.getElementById("gewichtung12").value) * 1);
+
+            wert_nein.push(parseFloat(document.getElementById("gewichtung1").value) * 1);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung2").value) * 1);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung3").value) * 1);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung4").value) * 1);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung5").value) * 2);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung6").value) * 1);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung7").value) * 4);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung8").value) * 4);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung9").value) * 4);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung10").value) * 3);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung11").value) * 4);
+            wert_nein.push(parseFloat(document.getElementById("gewichtung12").value) * 4);
+
+            document.getElementById("ergebnis_ja_1").innerText = Math.round(wert_ja[0]); //3.8993506
+            document.getElementById("ergebnis_ja_2").innerText = Math.round(wert_ja[1]); //4.3720058
+            document.getElementById("ergebnis_ja_3").innerText = Math.round(wert_ja[2]); //3.7409812
+            document.getElementById("ergebnis_ja_4").innerText = Math.round(wert_ja[3]); //3.66342
+            document.getElementById("ergebnis_ja_5").innerText = Math.round(wert_ja[4]); //2.86240981
+            document.getElementById("ergebnis_ja_6").innerText = Math.round(wert_ja[5]); //3.455772006
+            document.getElementById("ergebnis_ja_7").innerText = Math.round(wert_ja[6]); //2.565800866
+            document.getElementById("ergebnis_ja_8").innerText = Math.round(wert_ja[7]); //3.659596
+            document.getElementById("ergebnis_ja_9").innerText = Math.round(wert_ja[8]); //4.469697
+            document.getElementById("ergebnis_ja_10").innerText = Math.round(wert_ja[9]); //2.77049062
+            document.getElementById("ergebnis_ja_11").innerText = Math.round(wert_ja[10]); //3.2691198
+            document.getElementById("ergebnis_ja_12").innerText = Math.round(wert_ja[11]); //4.136724387
+
+            document.getElementById("ergebnis_nein_1").innerText = Math.round(wert_nein[0]); //3.8993506
+            document.getElementById("ergebnis_nein_2").innerText = Math.round(wert_nein[1]); //4.3720058
+            document.getElementById("ergebnis_nein_3").innerText = Math.round(wert_nein[2]); //3.7409812
+            document.getElementById("ergebnis_nein_4").innerText = Math.round(wert_nein[3]); //3.66342
+            document.getElementById("ergebnis_nein_5").innerText = Math.round(wert_nein[4]); //2.86240981
+            document.getElementById("ergebnis_nein_6").innerText = Math.round(wert_nein[5]); //3.455772006
+            document.getElementById("ergebnis_nein_7").innerText = Math.round(wert_nein[6]); //2.565800866
+            document.getElementById("ergebnis_nein_8").innerText = Math.round(wert_nein[7]); //3.659596
+            document.getElementById("ergebnis_nein_9").innerText = Math.round(wert_nein[8]); //4.469697
+            document.getElementById("ergebnis_nein_10").innerText = Math.round(wert_nein[9]); //2.77049062
+            document.getElementById("ergebnis_nein_11").innerText = Math.round(wert_nein[10]); //3.2691198
+            document.getElementById("ergebnis_nein_12").innerText = Math.round(wert_nein[11]); //4.136724387
 
             if (document.getElementById("gewichtung1").value == "") {
                 document.getElementById("ergebnis_ja_1").innerText = "";
@@ -90,24 +119,24 @@
         function zusammen() {
             insgesamt_ja = 0;
             for (let i = 1; i <= 12; i++) {
-                let ja_wert = parseFloat(document.getElementById("ergebnis_ja_" + i).innerText);
+                let ja_wert = parseFloat(wert_ja[i - 1]);
                 if (!isNaN(ja_wert)) {
                     insgesamt_ja += ja_wert;
                 }
             }
             if (insgesamt_ja > 0) {
-                document.getElementById("insgesamt_ja").innerText = "Insgesamt Ja: " + insgesamt_ja;
+                document.getElementById("insgesamt_ja").innerText = "Insgesamt Ja: " + Math.round(insgesamt_ja);
             }
 
             insgesamt_nein = 0;
             for (let i = 1; i <= 12; i++) {
-                let nein_wert = parseFloat(document.getElementById("ergebnis_nein_" + i).innerText);
+                let nein_wert = parseFloat(wert_nein[i - 1]);
                 if (!isNaN(nein_wert)) {
                     insgesamt_nein += nein_wert;
                 }
             }
             if (insgesamt_nein > 0) {
-                document.getElementById("insgesamt_nein").innerText = "Insgesamt Nein: " + insgesamt_nein;
+                document.getElementById("insgesamt_nein").innerText = "Insgesamt Nein: " + Math.round(insgesamt_nein);
             }
         }
 
@@ -194,7 +223,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="cells">Höhere Vielfalt beim Lernen</td>
+                                    <td class="cells">Vielfalt beim Lernen / Unterrichtsgestaltung</td>
                                     <!-- Numeric Textfield with Floating Label -->
                                     <td class="cells">
                                         <div class="">
@@ -206,7 +235,7 @@
                                     <td class="cells center" id="ergebnis_nein_1" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td class="cells">Organisation / Dokumentation</td>
+                                    <td class="cells">Organisation / Dokumentation der Ergebnisse</td>
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung2"
@@ -218,7 +247,7 @@
                                     <td class="cells center" id="ergebnis_nein_2" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td class="cells">Schnellerer Informationsaustausch</td>
+                                    <td class="cells">Informationsaustausch, z.B. E-Mails oder Messengers</td>
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung3"
@@ -230,7 +259,7 @@
                                     <td class="cells center" id="ergebnis_nein_3" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td class="cells">Weniger Gewicht in der Schultasche</td> <!--Hier-->
+                                    <td class="cells">Gewicht der Schultasche</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung4"
@@ -266,7 +295,7 @@
                                     <td class="cells center" id="ergebnis_nein_6" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">keine Eigenkompetenz</td> <!--Hier-->
+                                    <td class="cells">Abhängigkeit von digitalen Medien</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung7"
@@ -278,7 +307,7 @@
                                     <td class="cells center" id="ergebnis_nein_7" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Hohe Anschaffungskosten</td> <!--Hier-->
+                                    <td class="cells">Höhe der entstehenden Kosten</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung8"
@@ -290,7 +319,7 @@
                                     <td class="cells center" id="ergebnis_nein_8" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Hohes Ablenkungspotenzial</td> <!--Hier-->
+                                    <td class="cells">Ablenkungspotenzial</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung9"
@@ -301,7 +330,7 @@
                                     <td class="cells center" id="ergebnis_nein_9" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Erhöhte Bildschirmzeit</td> <!--Hier-->
+                                    <td class="cells">Bildschirmzeit</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung10"
@@ -312,7 +341,7 @@
                                     <td class="cells center" id="ergebnis_nein_10" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Größere technische Abhängigkeiten</td> <!--Hier-->
+                                    <td class="cells">technische Abhängigkeiten, wie Strom oder Internet</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung11"
@@ -323,7 +352,7 @@
                                     <td class="cells center" id="ergebnis_nein_11" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Datenmissbrauch möglich</td> <!--Hier-->
+                                    <td class="cells">Datenschutz</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
                                             <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung12"
