@@ -181,7 +181,7 @@
         }
 
         input {
-            width: 65px;
+            width: 20px;
         }
 
         .aussagen {
@@ -193,6 +193,9 @@
             border: bottom;
             text-align: center;
             font-size: 16px;
+        }
+        .pro {
+            width: 25px;
         }
     </style>
 </head>
@@ -348,7 +351,7 @@
                             <thead>
                                 <tr>
                                     <th class="">Aussagen</th>
-                                    <th>Eigene <br>Wertung</th>
+                                    <th>Eigene<br>Wertung</th>
                                     <th>Pro </th>
                                     <th>Contra</th>
                                 </tr>
@@ -363,19 +366,19 @@
                                                 id="gewichtung1" placeholder="" style="outline: none;" width="10px">
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_1" value=""></td>
+                                    <td class="cells center pro" id="ergebnis_ja_1" value=""></td>
                                     <td class="cells center" id="ergebnis_nein_1" value=""></td>
                                 </tr>
                                 <tr>
                                     <td class="cells aussagen">Organisation / Dokumentation der Ergebnisse</td>
                                     <td class="cells">
                                         <div class="">
-                                            <input class="input_noborder" type="number" pattern="-?[1-5]*(\.[1-5]+)?"
+                                            <input class="input_noborder" type="number" min="1" max="5" pattern="-?[1-5]*(\.[1-5]+)?"
                                                 id="gewichtung2" placeholder="">
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_2" value=""></td>
+                                    <td class="cells center pro" id="ergebnis_ja_2" value=""></td>
                                     <td class="cells center" id="ergebnis_nein_2" value=""></td>
                                 </tr>
                                 <tr>
@@ -387,7 +390,7 @@
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_3" value=""></td>
+                                    <td class="cells center pro" id="ergebnis_ja_3" value=""></td>
                                     <td class="cells center" id="ergebnis_nein_3" value=""></td>
                                 </tr>
                                 <tr>
@@ -399,7 +402,7 @@
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_4" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_4" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_4" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -412,7 +415,7 @@
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_5" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_5" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_5" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -424,7 +427,7 @@
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_6" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_6" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_6" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -436,7 +439,7 @@
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_7" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_7" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_7" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -448,7 +451,7 @@
 
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_8" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_8" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_8" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -459,7 +462,7 @@
                                                 id="gewichtung9" placeholder=""> <!--Hier--> <!--Hier-->
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_9" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_9" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_9" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -470,7 +473,7 @@
                                                 id="gewichtung10" placeholder=""> <!--Hier--><!--Hier-->
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_10" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_10" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_10" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -482,7 +485,7 @@
                                                 id="gewichtung11" placeholder=""> <!--Hier--><!--Hier-->
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_11" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_11" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_11" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
@@ -493,7 +496,7 @@
                                                 id="gewichtung12" placeholder=""> <!--Hier--><!--Hier-->
                                         </div>
                                     </td>
-                                    <td class="cells center" id="ergebnis_ja_12" value=""></td> <!--Hier-->
+                                    <td class="cells center pro" id="ergebnis_ja_12" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_12" value=""></td> <!--Hier-->
                                 </tr>
                             </tbody>
