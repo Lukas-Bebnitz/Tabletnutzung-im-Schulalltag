@@ -178,7 +178,17 @@
             border-spacing: 6px;
         }
         input {
-            width: 90px;
+            width: 65px;
+        }
+        .aussagen {
+            width: 200px;
+        }
+        .input_noborder {
+            border: none;
+            border: bottom;
+            border-bottom: 1px solid rgb(122, 122, 122);
+            text-align: center;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -283,36 +293,36 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
             </section>
             <section class="mdl-layout__tab-panel" id="fixed-tab-3">
                 <div class="page-content">
-                    <h3 style="text-align: center; margin-top: 50px; font-size: 275%;">Entscheidungsmatrix</h3>
+                    <h3 style="text-align: center; margin-top: 50px; font-size: 255%;">Entscheidungsmatrix</h3>
                     <div text-align="center" align="center" width="100%">
                         <table class="">
                             <thead>
                                 <tr>
                                     <th class="">Aussagen</th>
                                     <th>Persönliche <br>Gewichtung</th>
-                                    <th>Ergebnis <br>Ja</th>
-                                    <th>Ergebnis <br>Nein</th>
+                                    <th>Pro  </th>
+                                    <th>Contra</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="cells">Vielfalt beim Lernen / Unterrichtsgestaltung</td>
+                                    <td class="cells aussagen">Vielfalt beim Lernen / Unterrichtsgestaltung</td>
                                     <!-- Numeric Textfield with Floating Label -->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung1"
-                                                placeholder="Gewichtung..." style="outline: none;" width="10px">
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung1"
+                                                placeholder="" style="outline: none;" width="10px">
                                         </div>
                                     </td>
                                     <td class="cells center" id="ergebnis_ja_1" value=""></td>
                                     <td class="cells center" id="ergebnis_nein_1" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td class="cells">Organisation / Dokumentation der Ergebnisse</td>
+                                    <td class="cells aussagen">Organisation / Dokumentation der Ergebnisse</td>
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung2"
-                                                placeholder="Gewichtung...">
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung2"
+                                                placeholder="">
 
                                         </div>
                                     </td>
@@ -320,11 +330,11 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_2" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td class="cells">Informationsaustausch, z.B. E-Mails oder Messengers</td>
+                                    <td class="cells aussagen">Informationsaustausch, z.B. E-Mails oder Messengers</td>
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung3"
-                                                placeholder="Gewichtung...">
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung3"
+                                                placeholder="">
 
                                         </div>
                                     </td>
@@ -332,11 +342,11 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_3" value=""></td>
                                 </tr>
                                 <tr>
-                                    <td class="cells">Gewicht der Schultasche</td> <!--Hier-->
+                                    <td class="cells aussagen">Gewicht der Schultasche</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung4"
-                                                placeholder="Gewichtung..."> <!--Hier--> <!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung4"
+                                                placeholder=""> <!--Hier--> <!--Hier-->
 
                                         </div>
                                     </td>
@@ -344,11 +354,11 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_4" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Sammeln von Erfahrung für das Berufsleben</td> <!--Hier-->
+                                    <td class="cells aussagen">Sammeln von Erfahrung für das Berufsleben</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung5"
-                                                placeholder="Gewichtung..."> <!--Hier--> <!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung5"
+                                                placeholder=""> <!--Hier--> <!--Hier-->
 
                                         </div>
                                     </td>
@@ -356,11 +366,11 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_5" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Nachhaltigkeit</td> <!--Hier-->
+                                    <td class="cells aussagen">Nachhaltigkeit</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung6"
-                                                placeholder="Gewichtung..."> <!--Hier--> <!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung6"
+                                                placeholder=""> <!--Hier--> <!--Hier-->
 
                                         </div>
                                     </td>
@@ -368,11 +378,11 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_6" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Abhängigkeit von digitalen Medien</td> <!--Hier-->
+                                    <td class="cells aussagen">Abhängigkeit von digitalen Medien</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung7"
-                                                placeholder="Gewichtung..."> <!--Hier--> <!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung7"
+                                                placeholder=""> <!--Hier--> <!--Hier-->
 
                                         </div>
                                     </td>
@@ -380,11 +390,11 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_7" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Höhe der entstehenden Kosten</td> <!--Hier-->
+                                    <td class="cells aussagen">Höhe der entstehenden Kosten</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung8"
-                                                placeholder="Gewichtung..."> <!--Hier--> <!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung8"
+                                                placeholder=""> <!--Hier--> <!--Hier-->
 
                                         </div>
                                     </td>
@@ -392,44 +402,44 @@ Weitere Mögliche gesundheitliche Auswirkungen sind: ÜbergewiCHT, Kopfschmerzen
                                     <td class="cells center" id="ergebnis_nein_8" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Ablenkungspotenzial</td> <!--Hier-->
+                                    <td class="cells aussagen">Ablenkungspotenzial</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung9"
-                                                placeholder="Gewichtung..."> <!--Hier--> <!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung9"
+                                                placeholder=""> <!--Hier--> <!--Hier-->
                                         </div>
                                     </td>
                                     <td class="cells center" id="ergebnis_ja_9" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_9" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Bildschirmzeit</td> <!--Hier-->
+                                    <td class="cells aussagen">Bildschirmzeit</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung10"
-                                                placeholder="Gewichtung..."> <!--Hier--><!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung10"
+                                                placeholder=""> <!--Hier--><!--Hier-->
                                         </div>
                                     </td>
                                     <td class="cells center" id="ergebnis_ja_10" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_10" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Technische Abhängigkeiten, wie Strom oder Internet</td> <!--Hier-->
+                                    <td class="cells aussagen">Technische Abhängigkeiten, wie Strom oder Internet</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung11"
-                                                placeholder="Gewichtung..."> <!--Hier--><!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung11"
+                                                placeholder=""> <!--Hier--><!--Hier-->
                                         </div>
                                     </td>
                                     <td class="cells center" id="ergebnis_ja_11" value=""></td> <!--Hier-->
                                     <td class="cells center" id="ergebnis_nein_11" value=""></td> <!--Hier-->
                                 </tr>
                                 <tr>
-                                    <td class="cells">Datenschutz</td> <!--Hier-->
+                                    <td class="cells aussagen">Datenschutz</td> <!--Hier-->
                                     <td class="cells">
                                         <div class="">
-                                            <input class="" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung12"
-                                                placeholder="Gewichtung..."> <!--Hier--><!--Hier-->
+                                            <input class="input_noborder" type="text" pattern="-?[1-5]*(\.[1-5]+)?" id="gewichtung12"
+                                                placeholder=""> <!--Hier--><!--Hier-->
                                         </div>
                                     </td>
                                     <td class="cells center" id="ergebnis_ja_12" value=""></td> <!--Hier-->
